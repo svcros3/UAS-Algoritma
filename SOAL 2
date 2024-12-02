@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+A = 0.05  
+T = 10    
+t_maks = 50  
+
+t = np.linspace(0, t_maks, 1000)  
+
+y = A * np.sin((2 * np.pi / T) * t)
+
+plt.figure(figsize=(10, 5))
+plt.plot(t, y, color="b", linestyle="-", label=r"y(t) = A*sin(2π/T * t)")
+plt.xlabel("Waktu (detik)")
+plt.ylabel("Posisi (meter)")
+plt.title("Grafik Gerak Harmonik Sederhana (Posisi terhadap Waktu)")
+plt.grid(True)
+plt.legend()
+plt.show()
