@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+k = 60  
+x_maks = 0.5  
+delta_x = 0.02  
+
+x = np.arange(0, x_maks + delta_x, delta_x)
+
+F = -k * x
+
+plt.figure(figsize=(10, 5))
+plt.plot(x, F, color="b", linestyle="-", label="F(x) = -k*x")
+plt.xlabel("Regangan (x) dalam meter")
+plt.ylabel("Gaya (F) dalam Newton")
+plt.title("Grafik Gaya F(x) terhadap Regangan x pada Pegas")
+plt.grid(True)
+plt.legend()
+plt.show()
