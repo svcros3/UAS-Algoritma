@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+v0 = 50  
+g = 9.8  
+
+t_total = 2 * v0 / g  
+
+t = np.linspace(0, t_total, 1000)  
+
+y = v0 * t - 0.5 * g * t**2
+
+plt.figure(figsize=(10, 5))
+plt.plot(t, y, color="b", linestyle="-", label=r"y(t) = v_0 t - 1/2 g t^2")
+plt.axhline(0, color='red', linestyle='--', linewidth=0.8, label='Titik Awal (y=0)')
+plt.xlabel("Waktu (detik)")
+plt.ylabel("Posisi (meter)")
+plt.title("Gerak Vertikal Benda")
+plt.grid(True)
+plt.legend()
+plt.show()
